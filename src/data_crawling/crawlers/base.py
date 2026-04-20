@@ -32,6 +32,9 @@ class BaseAbstractCrawler(BaseCrawler, ABC):
         options.add_argument(f"--disk-cache-dir={mkdtemp()}")
         options.add_argument("--remote-debugging-port=9226")
 
+        user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.50 Safari/537.36'
+        options.add_argument(f'user-agent={user_agent}')
+
         self.set_extra_driver_options(options)
 
         self.scroll_limit = scroll_limit
