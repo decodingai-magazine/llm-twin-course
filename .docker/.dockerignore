@@ -1,1 +1,4 @@
 bonus_superlinked_rag/server
+.git/
+__pycache__/
+.venv/
